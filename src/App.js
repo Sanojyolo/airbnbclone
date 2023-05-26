@@ -5,8 +5,12 @@ import './App.css';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 
-
+import Container from '@mui/material/Container'
 import Header from './components/Header';
+import OptionTab from './components/OptionTab';
+import LocationCard from './components/LocationCard';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -19,9 +23,25 @@ function App() {
       }}>
         <Box>
           <Header/>
+          <OptionTab/>
+          </Box>
+          <Box sx={{
+            display:'flex',
+            flexDirection: 'column',
+            flexGrow: 1,
+            height: 100,
+            overflowY: 'scroll'
+          }}>
+          <Container maxWidth='xl' sx={{mb:3}}>
+          <LocationCard/>
+          </Container>
+
+          </Box>
+          <Footer/>
+          
         </Box>
 
-      </Box>
+      
     </Fragment>
   );
 }
